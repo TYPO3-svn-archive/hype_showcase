@@ -1,0 +1,108 @@
+<f:layout name="project" />
+
+<f:section name="content">
+	<f:if condition="{project}">
+		<f:then>
+			<!-- title -->
+			<h1>{project.title}</h1>
+			
+			<!-- client -->
+			<f:if condition="{project.client}">
+				<p class="client">Client: <f:link.action controller="Client" action="show" pageUid="{settings.pages.client.show}" pluginName="Pi2" arguments="{client : project : client}">{project.client.title}</f:link.action></p>
+			</f:if>
+			
+			<!-- introduction -->
+			<f:if condition="{project.introduction}">
+				<p class="introduction"><f:format.nl2br>{project.introduction}</f:format.nl2br></p>
+			</f:if>
+			
+			<!-- description -->
+			<f:if condition="{project.description}">
+				<div class="description">
+					<f:format.html>{project.description}</f:format.html>
+				</div>
+			</f:if>
+			
+			<!-- images -->
+			<f:if condition="{project.images.1}">
+				<div class="images">
+					<h2>Impressions</h2>
+					
+					<ul>
+						<f:for each="{project.images}" as="image" key="key">
+							<li>
+								<f:if condition="{key} > 0">
+									<f:link.external uri="{f:uri.resource(path:'{settings.images.project.path}{image}')}">
+										<f:image src="{settings.images.project.path}{image}" maxWidth="{settings.images.project.maxWidth}" maxHeight="{settings.images.project.maxHeight}" alt="" />
+									</f:link.external>
+								</f:if>
+							</li>
+						</f:for>
+					</ul>
+				</div>
+			</f:if>
+			
+			<!-- features -->
+			<f:if condition="{project.features}">
+				<div class="features">
+					<h2>Features</h2>
+					
+					<ul>
+						<f:for each="{project.features}" as="feature">
+							<li>
+								<h3>{feature.title}</h3>
+								<p><f:format.nl2br>{feature.introduction}</f:format.nl2br></p>
+								
+								<div class="images">
+									<ul>
+										<f:for each="{feature.images}" as="image">
+											<li>
+												<f:link.external uri="{f:uri.resource(path:'{settings.images.feature.path}{image}')}">
+													<f:image src="{settings.images.feature.path}{image}" maxWidth="{settings.images.feature.maxWidth}" maxHeight="{settings.images.feature.maxHeight}" alt="" />
+												</f:link.external>
+											</li>
+										</f:for>
+									</ul>
+								</div>
+							</li>
+						</f:for>
+					</ul>
+				</div>
+			</f:if>
+			
+			<!-- awards -->
+			<f:if condition="{project.awards}">
+				<div class="awards">
+					<h2>Awards</h2>
+					
+					<ul>
+						<f:for each="{project.awards}" as="award">
+							<li>
+								<h3>{award.title}</h3>
+								<p><f:format.nl2br>{award.introduction}</f:format.nl2br></p>
+								
+								<div class="images">
+									<ul>
+										<f:for each="{award.images}" as="image">
+											<li>
+												<f:link.external uri="/{settings.images.award.path}{image}">
+													<f:image src="{settings.images.award.path}{image}" maxWidth="{settings.images.award.maxWidth}" maxHeight="{settings.images.award.maxHeight}" alt="" />
+												</f:link.external>
+											</li>
+										</f:for>
+									</ul>
+								</div>
+							</li>
+						</f:for>
+					</ul>
+				</div>
+			</f:if>
+			
+			<!-- link to overview -->
+			<p><f:link.action controller="Project">Show all projects</f:link.action></p>
+		</f:then>
+		<f:else>
+			<p>Project not found.</p>
+		</f:else>
+	</f:if>
+</f:section>

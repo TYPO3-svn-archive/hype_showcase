@@ -1,0 +1,28 @@
+<f:layout name="project" />
+
+<f:section name="content">
+	<f:if condition="{projects}">
+		<f:then>
+			<dl>
+				<f:for each="{projects}" as="project">
+					<dt>
+						<h2><f:link.action action="show" arguments="{project : project}">{project.title}</f:link.action></h2>
+					</dt>
+					<dd>
+						<f:if condition="{project.introduction}">
+							<p class="introduction"><f:format.nl2br>{project.introduction}</f:format.nl2br></p>
+						</f:if>
+						<f:if condition="{project.images}">
+							<p class="images">
+								<f:link.action action="show" arguments="{project : project}"><f:image src="{settings.images.project.path}{project.images.0}" maxWidth="{settings.images.project.maxWidth}" maxHeight="{settings.images.project.maxHeight}" alt="" /></f:link.action>
+							</p>
+						</f:if>
+					</dd>
+				</f:for>
+			</dl>
+		</f:then>
+		<f:else>
+			<p>No projects available.</p>
+		</f:else>
+	</f:if>
+</f:section>

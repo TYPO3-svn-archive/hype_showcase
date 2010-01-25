@@ -1,0 +1,50 @@
+ # Plugin configuration
+plugin.tx_hypeshowcase {
+	settings {
+		pages {
+			client {
+				index = 9
+				show = 9
+			}
+			
+			project {
+				index = 10
+				show = 10
+			}
+		}
+		
+		images {
+			project {
+				path = uploads/hype/showcase/projects/
+				
+				maxWidth = 240
+				maxHeight = 
+			}
+			
+			feature {
+				path = uploads/hype/showcase/features/
+				
+				maxWidth = 160
+				maxHeight =
+			}
+			
+			service {
+				path = uploads/hype/showcase/services/
+				
+				maxWidth = 160
+				maxHeight =
+			}
+			
+			award {
+				path = uploads/hype/showcase/awards/
+				
+				maxWidth = 160
+				maxHeight =
+			}
+		}
+	}
+	
+	persistence {
+		storagePid = 
+	}
+}

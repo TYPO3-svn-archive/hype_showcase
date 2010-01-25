@@ -1,0 +1,21 @@
+<f:layout name="client" />
+
+<f:section name="content">
+	<f:if condition="{clients}">
+		<f:then>
+			<dl>
+				<f:for each="{clients}" as="client">
+					<dt>
+						<h2><f:link.action action="show" arguments="{client : client}">{client.title}</f:link.action></h2>
+					</dt>
+					<dd>
+						<f:format.nl2br>{client.introduction}</f:format.nl2br>
+					<dd>
+				</f:for>
+			</dl>
+		</f:then>
+		<f:else>
+			<p>No clients available.</p>
+		</f:else>
+	</f:if>
+</f:section>

@@ -1,0 +1,78 @@
+<f:layout name="client" />
+
+<f:section name="content">
+	<f:if condition="{client}">
+		<f:then>
+			<!-- title -->
+			<h1>{client.title}</h1>
+			
+			<!-- website -->
+			<f:if condition="{client.website}">
+				<p class="website">Website: <f:link.external uri="{client.website}">{client.website}</f:link.external></p>
+			</f:if>
+			
+			<!-- introduction -->
+			<f:if condition="{client.introduction}">
+				<p class="introduction"><f:format.nl2br>{client.introduction}</f:format.nl2br></p>
+			</f:if>
+			
+			<!-- description -->
+			<f:if condition="{client.description}">
+				<div class="description">
+					<f:format.html>{client.description}</f:format.html>
+				</div>
+			</f:if>
+			
+			<!-- images -->
+			<f:if condition="{client.images}">
+				<div class="images">
+					<h2>Impressions</h2>
+					
+					<ul>
+						<f:for each="{client.images}" as="image">
+							<li>
+								<f:link.external uri="/{settings.images.client.path}{image}">
+									<f:image src="{settings.images.client.path}{image}" maxWidth="{settings.images.client.maxWidth}" maxHeight="{settings.images.client.maxHeight}" alt="" />
+								</f:link.external>
+							</li>
+						</f:for>
+					</ul>
+				</div>
+			</f:if>
+			
+			<!-- projects -->
+			<f:if condition="{client.projects}">
+				<div class="projects">
+					<h2>Projects</h2>
+					
+					<ul>
+						<f:for each="{client.projects}" as="project">
+							<li>
+								<h3><f:link.action controller="Project" action="show" pageUid="{settings.pages.project.show}" pluginName="Pi1" arguments="{project : project}">{project.title}</f:link.action></h3>
+								<p><f:format.nl2br>{project.introduction}</f:format.nl2br></p>
+								
+								<div class="images">
+									<ul>
+										<f:for each="{project.images}" as="image">
+											<li>
+												<f:link.external uri="/{settings.images.project.path}{image}">
+													<f:image src="{settings.images.project.path}{image}" maxWidth="{settings.images.project.maxWidth}" maxHeight="{settings.images.project.maxHeight}" alt="" />
+												</f:link.external>
+											</li>
+										</f:for>
+									</ul>
+								</div>
+							</li>
+						</f:for>
+					</ul>
+				</div>
+			</f:if>
+			
+			<!-- link to overview -->
+			<p><f:link.action controller="Client">Show all clients</f:link.action></p>
+		</f:then>
+		<f:else>
+			<p>Client not found.</p>
+		</f:else>
+	</f:if>
+</f:section>

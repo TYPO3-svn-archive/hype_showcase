@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'hype_showcase'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_hypeshowcase_domain_model_client">Client</label>
+			<label index="tx_hypeshowcase_domain_model_client.title">Title</label>
+			<label index="tx_hypeshowcase_domain_model_client.introduction">Introduction</label>
+			<label index="tx_hypeshowcase_domain_model_client.description">Description</label>
+			<label index="tx_hypeshowcase_domain_model_client.images">Images</label>
+			<label index="tx_hypeshowcase_domain_model_client.branch">Branch</label>
+			<label index="tx_hypeshowcase_domain_model_client.website">Website</label>
+			<label index="tx_hypeshowcase_domain_model_client.projects">Projects</label>
+			
+			<label index="tx_hypeshowcase_domain_model_project">Project</label>
+			<label index="tx_hypeshowcase_domain_model_project.title">Title</label>
+			<label index="tx_hypeshowcase_domain_model_project.introduction">Introduction</label>
+			<label index="tx_hypeshowcase_domain_model_project.description">Description</label>
+			<label index="tx_hypeshowcase_domain_model_project.images">Images</label>
+			<label index="tx_hypeshowcase_domain_model_project.features">Features</label>
+			<label index="tx_hypeshowcase_domain_model_project.client">Client</label>
+			<label index="tx_hypeshowcase_domain_model_project.services">Services</label>
+			<label index="tx_hypeshowcase_domain_model_project.awards">Awards</label>
+			
+			<label index="tx_hypeshowcase_domain_model_feature">Feature</label>
+			<label index="tx_hypeshowcase_domain_model_feature.title">Title</label>
+			<label index="tx_hypeshowcase_domain_model_feature.introduction">Introduction</label>
+			<label index="tx_hypeshowcase_domain_model_feature.description">Description</label>
+			<label index="tx_hypeshowcase_domain_model_feature.images">Images</label>
+			<label index="tx_hypeshowcase_domain_model_feature.project">Project</label>
+			
+			<label index="tx_hypeshowcase_domain_model_service">Service</label>
+			<label index="tx_hypeshowcase_domain_model_service.title">Title</label>
+			<label index="tx_hypeshowcase_domain_model_service.introduction">Introduction</label>
+			<label index="tx_hypeshowcase_domain_model_service.description">Description</label>
+			<label index="tx_hypeshowcase_domain_model_service.images">Images</label>
+			<label index="tx_hypeshowcase_domain_model_service.projects">Projects</label>
+			
+			<label index="tx_hypeshowcase_domain_model_award">Award</label>
+			<label index="tx_hypeshowcase_domain_model_award.title">Title</label>
+			<label index="tx_hypeshowcase_domain_model_award.introduction">Introduction</label>
+			<label index="tx_hypeshowcase_domain_model_award.description">Description</label>
+			<label index="tx_hypeshowcase_domain_model_award.images">Images</label>
+			<label index="tx_hypeshowcase_domain_model_award.project">Project</label>
+		</languageKey>
+		
+		<languageKey index="de" type="array">
+			<label index="tx_hypeshowcase_domain_model_client">Kunde</label>
+			<label index="tx_hypeshowcase_domain_model_client.title">Titel</label>
+			<label index="tx_hypeshowcase_domain_model_client.introduction">Kurzbeschreibung</label>
+			<label index="tx_hypeshowcase_domain_model_client.description">Beschreibung</label>
+			<label index="tx_hypeshowcase_domain_model_client.images">Bilder</label>
+			<label index="tx_hypeshowcase_domain_model_client.branch">Branche</label>
+			<label index="tx_hypeshowcase_domain_model_client.website">Website</label>
+			<label index="tx_hypeshowcase_domain_model_client.projects">Projekte</label>
+			
+			<label index="tx_hypeshowcase_domain_model_project">Projekte</label>
+			<label index="tx_hypeshowcase_domain_model_project.title">Titel</label>
+			<label index="tx_hypeshowcase_domain_model_project.introduction">Kurzbeschreibung</label>
+			<label index="tx_hypeshowcase_domain_model_project.description">Beschreibung</label>
+			<label index="tx_hypeshowcase_domain_model_project.images">Bilder</label>
+			<label index="tx_hypeshowcase_domain_model_project.features">Besonderheiten</label>
+			<label index="tx_hypeshowcase_domain_model_project.client">Kunde</label>
+			<label index="tx_hypeshowcase_domain_model_project.services">Dienstleistungen</label>
+			<label index="tx_hypeshowcase_domain_model_project.awards">Auszeichnungen</label>
+			
+			<label index="tx_hypeshowcase_domain_model_feature">Besonderheit</label>
+			<label index="tx_hypeshowcase_domain_model_feature.title">Titel</label>
+			<label index="tx_hypeshowcase_domain_model_feature.introduction">Kurzbeschreibung</label>
+			<label index="tx_hypeshowcase_domain_model_feature.description">Beschreibung</label>
+			<label index="tx_hypeshowcase_domain_model_feature.images">Bilder</label>
+			<label index="tx_hypeshowcase_domain_model_feature.project">Projekt</label>
+			
+			<label index="tx_hypeshowcase_domain_model_service">Dienstleistung</label>
+			<label index="tx_hypeshowcase_domain_model_service.title">Titel</label>
+			<label index="tx_hypeshowcase_domain_model_service.introduction">Kurzbeschreibung</label>
+			<label index="tx_hypeshowcase_domain_model_service.description">Beschreibung</label>
+			<label index="tx_hypeshowcase_domain_model_service.images">Bilder</label>
+			<label index="tx_hypeshowcase_domain_model_service.projects">Projekte</label>
+			
+			<label index="tx_hypeshowcase_domain_model_award">Auszeichnung</label>
+			<label index="tx_hypeshowcase_domain_model_award.title">Titel</label>
+			<label index="tx_hypeshowcase_domain_model_award.introduction">Kurzbeschreibung</label>
+			<label index="tx_hypeshowcase_domain_model_award.description">Beschreibung</label>
+			<label index="tx_hypeshowcase_domain_model_award.images">Bilder</label>
+			<label index="tx_hypeshowcase_domain_model_award.project">Projekt</label>
+		</languageKey>
+	</data>
+</T3locallang>
